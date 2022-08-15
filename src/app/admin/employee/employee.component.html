@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+    <br>
+    <h1>Employee List</h1>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.fullname}}</td>
+                <td>{{employee.position}}</td>
+                <td><a [routerLink]="['/admin/employee', employee.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

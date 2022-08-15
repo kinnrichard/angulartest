@@ -1,0 +1,20 @@
+<div class="container" *ngIf="employee">
+    <br>
+    <br>
+    <h1>Add Employee</h1>
+    <br>
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" name="name" [(ngModel)]="employee.fullname">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Position</label>
+            <input class="form-control" name="position" [(ngModel)]="employee.position">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
